@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+}
+
+.boardContainer {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+  height: 100vh;
+  width: 100vw;
+}
+
+.cell{
+  font-size: 48px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-weight: bold;
+  color: goldenrod;
+  border: 1px solid goldenrod;
+  cursor: pointer;
+}
+
+.oops {
+  background-attachment: fixed;
+}
