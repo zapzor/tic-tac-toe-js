@@ -40,14 +40,10 @@ body {
 
 .declareWinner {
   display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  position: absolute;
+  left: 45vw;
+  top: 15vh;
+  align-content: center;
 }
 
 .declareWinnerText {
@@ -70,6 +66,6 @@ body {
   background-color: goldenrod;
 }
 
-.declare-Winner.active {
+.declareWinner.active {
   display: flex;
 }
