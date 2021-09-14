@@ -11,23 +11,37 @@ const Player = () => {
   return {}
 }
 
+const board = document.querySelector('.boardContainer')
 const cell = document.querySelectorAll('.cell')
+const restartButton = document.querySelector('.restartButton')
+gameArray = []
+let currentTurn = document.createElement('div')
 
-const xTurn = 'X'
-const oTurn = 'O'
-
-const changeCell = (e) => {
-  foo = e
-  cell.forEach((e) => {
-    e.classList.toggle('turnChange')
-    if  (e.classList.contains('turnChange')) {
-      foo.target.innerText = 'X'
-    } else
-    foo.target.innerText = 'O'
-  })
-
+const change = (e) => {
+  currentTurn.classList.toggle('turnChange')
+  if (currentTurn.classList.contains('turnChange')) {
+    e.target.innerText = 'X'
+    gameArray.push('X')
+  } else {
+    e.target.innerText = 'O'
+    gameArray.push('O')
+  }
 }
 
 cell.forEach(cell => {
-  cell.addEventListener('click', changeCell, {once: true})
+  cell.addEventListener('click', change, {once: true})
 })
+
+const clearBoard = () => {
+  cell.forEach (cell => {
+    cell.innerText = ''
+  })
+  gameArray = []
+}
+
+restartButton.addEventListener('click', clearBoard)
+
+const declareWinner = () => {
+  if (gameArray.length == 9) {
+  }
+}
