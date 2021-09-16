@@ -3,6 +3,7 @@ const gameBoard = (() => {
   // DOM handling and array for determining game length
   const boardCells = document.querySelectorAll('.cell');
   const declareWinner = document.querySelector('.declareWinner');
+
   const currentTurn = document.createElement('div');
   let gameArray = [];
 
@@ -91,7 +92,7 @@ const displayController = (() => {
     handleClick();
     gameBoard.currentTurn.classList.remove('turnChange');
     gameBoard.declareWinner.classList.remove('active');
-    gameBoard.gameArray = [];
+    gameBoard.gameArray.length = 0;
 
     gameBoard.boardCells.forEach((cell) => {
       cell.textContent = '';

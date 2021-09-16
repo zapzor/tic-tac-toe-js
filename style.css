@@ -43,9 +43,8 @@ body {
 .declareWinner {
   display: none;
   position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(-50%, -500%);
+  left: 45%;
+  top: 18%;
   font-size: 3rem;
 }
 
