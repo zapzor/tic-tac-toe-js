@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -22,7 +24,6 @@ body {
   justify-content: center;
   align-content: center;
   grid-template-columns: repeat(3, auto);
-
 }
 
 /* Individual cells for placing X's and O's on board */
@@ -42,12 +43,9 @@ body {
 .declareWinner {
   display: none;
   position: absolute;
-  left: 45vw;
-  top: 15vh;
-  align-content: center;
-}
-
-.declareWinnerText {
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -500%);
   font-size: 3rem;
 }
 
@@ -58,7 +56,7 @@ body {
 
 .restartButton button {
   font-size: 3rem;
-  padding: .25em .25em;
+  padding: 0.25em 0.25em;
   border: none;
   border-radius: 10px;
   cursor: pointer;

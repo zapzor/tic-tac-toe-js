@@ -3,7 +3,6 @@ const gameBoard = (() => {
   // DOM handling and array for determining game length
   const boardCells = document.querySelectorAll('.cell');
   const declareWinner = document.querySelector('.declareWinner');
-  const declareWinnerText = document.querySelector('.declareWinnerText');
   const currentTurn = document.createElement('div');
   let gameArray = [];
 
@@ -11,15 +10,15 @@ const gameBoard = (() => {
 
   // Messages to be displayed on game end
   const xWinner = () => {
-    declareWinnerText.textContent = 'X WINS';
+    declareWinner.textContent = 'X WINS';
   };
 
   const oWinner = () => {
-    declareWinnerText.textContent = 'O WINS';
+    declareWinner.textContent = 'O WINS';
   };
 
   const draw = () => {
-    declareWinnerText.textContent = 'Draw';
+    declareWinner.textContent = 'Draw';
   };
 
   const winConditions = [
